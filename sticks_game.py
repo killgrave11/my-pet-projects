@@ -14,16 +14,12 @@ def end_of_game(sticks):
     return number_of_sticks <= 0
 
 
-while (not end_of_game(number_of_sticks)):
-    print(
-        f"Сколько палочек вы хотите взять? Палочек осталось {number_of_sticks}"
-    )
+while not end_of_game(number_of_sticks):
+    print(f"Сколько палочек вы хотите взять? Палочек осталось {number_of_sticks}")
     taken = int(input())
 
     if not can_take(taken):
-        print(
-            f"Вы попробовали взять {taken}. Возможно взять 1, 2 или 3 палочки."
-        )
+        print(f"Вы попробовали взять {taken}. Возможно взять 1, 2 или 3 палочки.")
         continue
 
     number_of_sticks -= taken

@@ -1,7 +1,7 @@
 import math
 
 
-#ошибки
+# ошибки
 class InvalidCircleError(Exception):
     """Raised when a circle has invalid radius"""
 
@@ -10,7 +10,7 @@ class InvalidTriangleError(Exception):
     """Raised when a triangle has invalid sides"""
 
 
-#площадь круга
+# площадь круга
 def calc_circle_area(radius):
     if radius <= 0:
         raise InvalidCircleError("Radius is lesws or equal to 0.")
@@ -18,23 +18,24 @@ def calc_circle_area(radius):
     return s
 
 
-class Triangle():
+class Triangle:
 
     def __init__(self, ab, ac, bc):
         self.ab = ab
         self.ac = ac
         self.bc = bc
 
-    #площадь треугольника
+    # площадь треугольника
     def calc_triangle_square(self, ab, ac, bc):
         if ab <= 0 or ac <= 0 or bc <= 0:
             raise InvalidTriangleError(
-                "One or more of the sides is less or equal to 0.")
+                "One or more of the sides is less or equal to 0."
+            )
         p = (ab + ac + bc) / 2
         s = math.sqrt(p * (p - ab) * (p - ac) * (p - bc))
         return s
 
-    #прямоугольный ли треугольник
+    # прямоугольный ли треугольник
     def is_rect(self, ab, ac, bc):
         if (ab**2) + (ac**2) == bc**2:
             return True
@@ -46,7 +47,7 @@ class Triangle():
             return False
 
 
-#Примеры:
+# Примеры:
 
 try:
     circle = calc_circle_area(10)
