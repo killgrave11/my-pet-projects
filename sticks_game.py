@@ -26,7 +26,7 @@ while not end_of_game(number_of_sticks):
     print(f"Палочек взято: {taken}\n")
 
     if end_of_game(number_of_sticks):
-        print(f"Палочек больше не осталось. \nИгрок {player_turn} проиграл!")
+        print(f"Палочек больше не осталось. \n Игрок {player_turn} проиграл!")
         break
 
     player_turn = switch_player_turn(player_turn)
