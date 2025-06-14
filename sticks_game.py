@@ -30,3 +30,7 @@ while not end_of_game(number_of_sticks):
         break
 
     player_turn = switch_player_turn(player_turn)
+
+
+
+жопа
